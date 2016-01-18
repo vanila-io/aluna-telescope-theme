@@ -1,0 +1,8 @@
+<template name="custom_post_author">
+  <div class="{{moduleClass}}">
+    <a href="{{getProfileUrl userId}}" title="{{getDisplayName userId}}" class="avatar-link avatar-small author-avatar">
+      {{> avatar userId=userId shape="circle"}}
+    </a>
+    <a class="post-author" href="{{getProfileUrl item.userId}}">{{displayName}}</a>
+  </div>
+</template>

@@ -1,0 +1,14 @@
+<template name="custom_logo">
+  <div class="logo header-module second-logo">
+    {{#if logoUrl}}
+      <h1 class="logo-image ">
+          <img src="{{logoUrl}}" alt="{{getSetting "title" "Telescope"}}"/>
+      </h1>
+    {{else}}
+      <h1 class="logo-text"><a href="/">{{getSetting "title" "Telescope"}}</a></h1>
+    {{/if}}
+    {{#if getSetting "tagline"}}
+      <h2 class="tagline">{{getSetting "tagline"}}</h2>
+    {{/if}}
+  </div>
+</template>

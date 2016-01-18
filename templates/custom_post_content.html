@@ -1,0 +1,12 @@
+<template name="custom_post_content">
+  <div class="post-content {{moduleClass}}">
+    <div class="post-info">
+      {{> custom_post_domain}}
+      {{> custom_post_title}}
+      <div class="lowInfo">
+{{> post_categories}}
+      {{> modules zone="postMeta" zoneClass="post-meta" moduleClass="post-meta-item" moduleData=this}}
+      </div>
+    </div>
+  </div>
+</template>

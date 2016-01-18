@@ -1,0 +1,34 @@
+<template name="custom_header">
+  <header class="header {{headerClass}}">
+
+    <a href="#menu" class="mobile-only mobile-menu-button button">
+      {{{icon "menu"}}}
+    </a>
+	<div class="smallLogo">
+		<a href="/">
+			<img src="/img/logo.png" alt="{{getSetting "title" "Telescope"}}">
+		</a>
+	</div>
+    {{> views_menu}}
+    {{#if currentUser.isAdmin}}
+    <ul class="nav nav-stacked">
+  <li>
+    <div class="btn-group">
+      <a class="btn dropdown-toggle adminDrop-btn" data-toggle="dropdown" href="#">
+        <img src="/img/Alien.png" alt="Admin views">
+        Admin
+      </a>
+      <ul class="dropdown-menu adminDrop-menu">
+        {{> views_menu}}
+      </ul>
+    </div>
+  </li>
+</ul>
+{{/if}}
+    <div class="userMenu-wrap">
+    {{#if hasSecondaryNav}}
+      {{> modules zone="secondaryNav" zoneClass="nav secondary-nav desktop-nav header-module desktop-only" moduleClass="header-submodule"}}
+    {{/if}}
+</div>
+  </header>
+</template>

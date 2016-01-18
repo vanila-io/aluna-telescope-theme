@@ -1,0 +1,12 @@
+<template name="custom_user_menu">
+  <div class="user-menu-wrapper {{moduleClass}}">
+    {{#if isLoggedIn}}
+      {{> menuComponent menuName="user" menuLabelTemplate="user_menu_label" menuItems=menuItems menuType=menuType expandLevel=0}}
+    {{else}}
+      <div class="signin-signup">
+        <a class="account-link sign-in" href="{{pathFor 'signIn'}}">
+          <img src="/img/SwitchON.png" alt="">{{_ "login"}}</a>
+      </div>
+    {{/if}}
+  </div>
+</template>
